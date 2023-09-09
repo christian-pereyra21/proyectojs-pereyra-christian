@@ -43,3 +43,12 @@ if (articulo.length > 0) {
     alert("Este producto no se encuentra :(");
 }
 
+let botonAgregar= document.getElementById("boton agregar")
+botonAgregar.addEventListener("click",()=>{
+    console.log("click save");
+})
+
+let botonEliminar= document.getElementById("boton eliminar")
+botonEliminar.addEventListener("click",()=>{
+    console.log("click remove");
+})
