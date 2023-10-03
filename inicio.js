@@ -24,6 +24,8 @@ productos.push(new Producto(10,"Controlador Pionner WE GO 4",358804,"controlador
 productos.push(new Producto(11,"Controlador DJ Hercules Inpulse 3",252147,"controlador"));
 productos.push(new Producto(12,"Controlador DDJ-200",113421,"controlador"));
 
+
+
 let nombreProducto= prompt("Hola!! gracias por visitarnos, elija su producto.");
 
 const articulo= productos.filter((item)=> item.categoria === nombreProducto || item.nombre === nombreProducto)
@@ -39,24 +41,20 @@ if (articulo.length > 0) {
     alert("Este producto no se encuentra :(");
 }
 
-// let carritoStorage= localStorage=(id,nombre,valor)=>{
-//     localStorage.setItem(id,nombre,valor)
-// }
 
 let botonAgregar= document.getElementById("boton agregar")
-botonAgregar.addEventListener("click",()=>{
+botonAgregar.addEventListener("click",(e)=>{
     console.log("click save")
-})
+});
 
 
-if(botonAgregar){
-    for(let i=0;i < localStorage.length; i++){
-        
+const botonEliminar= document.getElementById("boton eliminar")
+botonEliminar.addEventListener("click",(e)=>{
+    console.log("click remove")
+});
 
-    }}
-
-
-let botonEliminar= document.getElementById("boton eliminar")
-botonEliminar.addEventListener("click",()=>{
-    console.log("click remove");
-})
+function agregarCarrito(id){
+    if(botonAgregar){
+        carritoShop.push(Producto.item)
+    }else{NaN}
+}

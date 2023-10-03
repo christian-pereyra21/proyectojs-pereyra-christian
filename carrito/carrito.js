@@ -1,17 +1,18 @@
 const carritoShop= []
 const carritoStorage= localStorage.getItem("carritoShop")
 
-if(carritoStorage){
-    carritoShop= JSON.parse(carritoStorage)
+if(botonAgregar){
+    carritoShop.forEach((Productos) => {
+        let div= document.createElement("div")
+        div.innerHTML=`
+        <h2 id=${Productos.id}>producto: ${Productos.nombre}</h2>
+        <p>$${Productos.precio}`
+        document.body.append(div)
+    })
 }else{
     let div= document.createElement("div");
     div.innerHTML= "No hay productos en el carrito de compras";
     document.body.append(div);
 }
 
-carritoShop.forEach((producto) => {
-    let div= document.createElement("div")
-    div.innerHTML=`
-    <h2 id=${producto.id}>producto: ${producto.nombre}</h2>
-    <p>$${producto.precio}`
-})
+
